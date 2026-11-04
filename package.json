@@ -1,0 +1,13 @@
+{
+  "name": "lab8-photo-album",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./css/tailwind.css --minify",
+    "watch:tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

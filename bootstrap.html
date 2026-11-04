@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="mn" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лаб 8 — Зургийн цомог (Bootstrap)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-custom.css">
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Агуулга руу очих</a>
+  <header class="site-header py-4">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+      <div>
+        <h1 class="h2 mb-1">Зургийн цомог</h1>
+        <p class="mb-0 text-secondary">Лаб 8: Bootstrap хувилбар</p>
+      </div>
+      <button type="button" class="btn btn-brand" id="themeToggle" aria-pressed="false">
+        <span id="themeLabel">Цайвар горим</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-md navbar-dark nav-brand">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Photo Album</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Цэс нээх/хаах">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#gallery">Цомог</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Видео</a></li>
+          <li class="nav-item"><a class="nav-link" href="#map">Газрын зураг</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Холбоо барих</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Тухай</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <section id="gallery" class="mb-5">
+      <h2 class="section-title mb-2">Зургийн цомог</h2>
+      <p class="text-secondary mb-4">Зураг дээр дарж эргүүлэн тайлбарыг хараарай.</p>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4"><article class="card flip-card h-100"><div class="flip-inner">
+          <div class="flip-front"><img src="img/photo1.jpg" class="card-img-top gallery-img" alt="Уулын зураг" width="800" height="600" loading="lazy"><div class="card-body"><h3 class="h5 card-title">Уул</h3><button class="btn btn-brand btn-sm flip-btn" type="button">Эргүүлэх</button></div></div>
+          <div class="flip-back"><h3>Уул</h3><p>Өглөөний цагт авсан зураг.</p><button class="btn btn-brand btn-sm flip-btn" type="button">Буцах</button></div>
+        </div></article></div>
+        <div class="col-12 col-sm-6 col-lg-4"><article class="card flip-card h-100"><div class="flip-inner">
+          <div class="flip-front"><img src="img/photo2.jpg" class="card-img-top gallery-img" alt="Нууруудын зураг" width="800" height="600" loading="lazy"><div class="card-body"><h3 class="h5 card-title">Нуур</h3><button class="btn btn-brand btn-sm flip-btn" type="button">Эргүүлэх</button></div></div>
+          <div class="flip-back"><h3>Нуур</h3><p>Тайван усны гадаргуу.</p><button class="btn btn-brand btn-sm flip-btn" type="button">Буцах</button></div>
+        </div></article></div>
+        <div class="col-12 col-sm-6 col-lg-4"><article class="card flip-card h-100"><div class="flip-inner">
+          <div class="flip-front"><img src="img/photo3.jpg" class="card-img-top gallery-img" alt="Хээрийн зураг" width="800" height="600" loading="lazy"><div class="card-body"><h3 class="h5 card-title">Хээр</h3><button class="btn btn-brand btn-sm flip-btn" type="button">Эргүүлэх</button></div></div>
+          <div class="flip-back"><h3>Хээр</h3><p>Өргөн уудам тал нутаг.</p><button class="btn btn-brand btn-sm flip-btn" type="button">Буцах</button></div>
+        </div></article></div>
+        <div class="col-12 col-sm-6 col-lg-4"><article class="card flip-card h-100"><div class="flip-inner">
+          <div class="flip-front"><img src="img/photo4.jpg" class="card-img-top gallery-img" alt="Хотын зураг" width="800" height="600" loading="lazy"><div class="card-body"><h3 class="h5 card-title">Хот</h3><button class="btn btn-brand btn-sm flip-btn" type="button">Эргүүлэх</button></div></div>
+          <div class="flip-back"><h3>Хот</h3><p>Үдшийн гэрэлтэй хот.</p><button class="btn btn-brand btn-sm flip-btn" type="button">Буцах</button></div>
+        </div></article></div>
+        <div class="col-12 col-sm-6 col-lg-4"><article class="card flip-card h-100"><div class="flip-inner">
+          <div class="flip-front"><img src="img/photo5.jpg" class="card-img-top gallery-img" alt="Ойн зураг" width="800" height="600" loading="lazy"><div class="card-body"><h3 class="h5 card-title">Ой</h3><button class="btn btn-brand btn-sm flip-btn" type="button">Эргүүлэх</button></div></div>
+          <div class="flip-back"><h3>Ой</h3><p>Нарсан ойн дундах зам.</p><button class="btn btn-brand btn-sm flip-btn" type="button">Буцах</button></div>
+        </div></article></div>
+        <div class="col-12 col-sm-6 col-lg-4"><article class="card flip-card h-100"><div class="flip-inner">
+          <div class="flip-front"><img src="img/photo6.jpg" class="card-img-top gallery-img" alt="Тэнгэрийн зураг" width="800" height="600" loading="lazy"><div class="card-body"><h3 class="h5 card-title">Тэнгэр</h3><button class="btn btn-brand btn-sm flip-btn" type="button">Эргүүлэх</button></div></div>
+          <div class="flip-back"><h3>Тэнгэр</h3><p>Нар жаргах үеийн тэнгэр.</p><button class="btn btn-brand btn-sm flip-btn" type="button">Буцах</button></div>
+        </div></article></div>
+      </div>
+    </section>
+
+    <section id="video" class="mb-5">
+      <h2 class="section-title mb-3">Видео</h2>
+      <video controls preload="metadata" class="w-100 rounded-4">
+        <source src="video/clip.webm" type="video/webm">
+        <source src="video/clip.mp4" type="video/mp4">
+        <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+        Таны хөтөч video элемент дэмждэггүй байна.
+      </video>
+    </section>
+
+    <section id="map" class="mb-5">
+      <h2 class="section-title mb-3">Газрын зураг</h2>
+      <div class="map-wrap"><iframe title="Улаанбаатар хотын газрын зураг" src="https://www.openstreetmap.org/export/embed.html?bbox=106.85%2C47.88%2C106.98%2C47.95&amp;layer=mapnik" loading="lazy" referrerpolicy="no-referrer"></iframe></div>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <h2 class="section-title mb-3">Холбоо барих</h2>
+      <form id="contactForm" class="contact-panel needs-validation" novalidate>
+        <div class="mb-3"><label for="fullName" class="form-label">Нэр</label><input id="fullName" class="form-control" type="text" required minlength="2"><div class="invalid-feedback">Нэрээ 2-оос дээш тэмдэгтээр оруулна уу.</div></div>
+        <div class="mb-3"><label for="email" class="form-label">И-мэйл</label><input id="email" class="form-control" type="email" required><div class="invalid-feedback">Зөв и-мэйл хаяг оруулна уу.</div></div>
+        <div class="mb-3"><label for="message" class="form-label">Зурвас</label><textarea id="message" class="form-control" rows="3" required minlength="5"></textarea><div class="invalid-feedback">Зурвасаа дор хаяж 5 тэмдэгтээр бичнэ үү.</div></div>
+        <button class="btn btn-brand" type="submit">Илгээх</button>
+        <p id="formMessage" class="mt-3 mb-0" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title mb-3">Тухай</h2>
+      <div class="about-panel d-flex flex-column flex-sm-row align-items-center gap-3">
+        <div class="camera-icon" aria-hidden="true">◎</div>
+        <p class="mb-0">Энэ хуудас нь өмнөх зургийн цомгийн Grid, responsive загвар, CSS animation, 3D flip card, dark mode болон multimedia хэсгийг үргэлжлүүлэн хөгжүүлсэн хувилбар юм.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer text-center py-4"><p class="mb-0">© 2026 Зургийн цомог портал — Bootstrap</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
