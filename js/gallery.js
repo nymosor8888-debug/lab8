@@ -32,6 +32,49 @@ document.querySelectorAll(".flip-card").forEach((card) => {
   });
 });
 
+const hoverPreview = document.getElementById("galleryHoverPreview");
+const hoverImage = document.getElementById("galleryHoverImage");
+const lightbox = document.getElementById("imageLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxClose = document.getElementById("lightboxClose");
+
+if (hoverPreview && hoverImage && lightbox && lightboxImage && lightboxCaption && lightboxClose) {
+  const hideHoverPreview = () => {
+    hoverPreview.hidden = true;
+    hoverPreview.setAttribute("aria-hidden", "true");
+  };
+
+  document.querySelectorAll(".gallery-image-button").forEach((button) => {
+    const image = button.querySelector("img");
+    if (!image) return;
+
+    const showHoverPreview = () => {
+      hoverImage.src = image.currentSrc || image.src;
+      hoverPreview.hidden = false;
+      hoverPreview.setAttribute("aria-hidden", "false");
+    };
+
+    button.addEventListener("mouseenter", showHoverPreview);
+    button.addEventListener("mouseleave", hideHoverPreview);
+    button.addEventListener("focus", showHoverPreview);
+    button.addEventListener("blur", hideHoverPreview);
+    button.addEventListener("click", () => {
+      hideHoverPreview();
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = image.alt;
+      lightbox.showModal();
+    });
+  });
+
+  lightboxClose.addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener("close", () => lightboxImage.removeAttribute("src"));
+}
+
 const navToggle = document.getElementById("navToggle");
 const navList = document.getElementById("navList");
 if (navToggle && navList) {
