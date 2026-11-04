@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/tailwind-gallery.css">
 </head>
 <body class="min-h-screen bg-page text-main transition-colors">
   <a class="skip-link" href="#gallery">Агуулга руу очих</a>
@@ -28,15 +29,15 @@
   </nav>
 
   <main class="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-10">
-    <section id="gallery">
-      <h2 class="mb-2 text-2xl font-bold">Зургийн цомог</h2><p class="mb-5 text-muted">Зураг дээр дарж эргүүлэн тайлбарыг хараарай.</p>
+    <section id="gallery" class="gallery-section">
+      <h2 class="mb-2 text-2xl font-bold">Зургийн цомог</h2><p class="mb-5 text-muted">Зураг дээр очиж томруулан харах, эсвэл дарж бүтэн дэлгэцээр нээх боломжтой.</p>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="img/photo1.jpg" alt="Уулын зураг" width="800" height="600" loading="lazy"><div class="card-caption"><h3>Уул</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Уул</h3><p>Өглөөний цагт авсан зураг.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
-        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="img/photo2.jpg" alt="Нууруудын зураг" width="800" height="600" loading="lazy"><div class="card-caption"><h3>Нуур</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Нуур</h3><p>Тайван усны гадаргуу.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
-        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="img/photo3.jpg" alt="Хээрийн зураг" width="800" height="600" loading="lazy"><div class="card-caption"><h3>Хээр</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Хээр</h3><p>Өргөн уудам тал нутаг.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
-        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="img/photo4.jpg" alt="Хотын зураг" width="800" height="600" loading="lazy"><div class="card-caption"><h3>Хот</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Хот</h3><p>Үдшийн гэрэлтэй хот.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
-        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="img/photo5.jpg" alt="Ойн зураг" width="800" height="600" loading="lazy"><div class="card-caption"><h3>Ой</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Ой</h3><p>Нарсан ойн дундах зам.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
-        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><img src="img/photo6.jpg" alt="Тэнгэрийн зураг" width="800" height="600" loading="lazy"><div class="card-caption"><h3>Тэнгэр</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Тэнгэр</h3><p>Нар жаргах үеийн тэнгэр.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
+        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><button class="gallery-image-button" type="button" aria-label="Уулын зургийг бүтэн дэлгэцээр харах"><img src="img/photo1.jpg" alt="Уулын зураг" width="800" height="600" loading="lazy"></button><div class="card-caption"><h3>Уул</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Уул</h3><p>Өглөөний цагт авсан зураг.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
+        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><button class="gallery-image-button" type="button" aria-label="Нуурын зургийг бүтэн дэлгэцээр харах"><img src="img/photo2.jpg" alt="Нууруудын зураг" width="800" height="600" loading="lazy"></button><div class="card-caption"><h3>Нуур</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Нуур</h3><p>Тайван усны гадаргуу.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
+        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><button class="gallery-image-button" type="button" aria-label="Хээрийн зургийг бүтэн дэлгэцээр харах"><img src="img/photo3.jpg" alt="Хээрийн зураг" width="800" height="600" loading="lazy"></button><div class="card-caption"><h3>Хээр</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Хээр</h3><p>Өргөн уудам тал нутаг.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
+        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><button class="gallery-image-button" type="button" aria-label="Хотын зургийг бүтэн дэлгэцээр харах"><img src="img/photo4.jpg" alt="Хотын зураг" width="800" height="600" loading="lazy"></button><div class="card-caption"><h3>Хот</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Хот</h3><p>Үдшийн гэрэлтэй хот.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
+        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><button class="gallery-image-button" type="button" aria-label="Ойн зургийг бүтэн дэлгэцээр харах"><img src="img/photo5.jpg" alt="Ойн зураг" width="800" height="600" loading="lazy"></button><div class="card-caption"><h3>Ой</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Ой</h3><p>Нарсан ойн дундах зам.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
+        <article class="flip-card"><div class="flip-inner"><div class="flip-front"><button class="gallery-image-button" type="button" aria-label="Тэнгэрийн зургийг бүтэн дэлгэцээр харах"><img src="img/photo6.jpg" alt="Тэнгэрийн зураг" width="800" height="600" loading="lazy"></button><div class="card-caption"><h3>Тэнгэр</h3><button class="flip-btn" type="button">Эргүүлэх</button></div></div><div class="flip-back"><h3>Тэнгэр</h3><p>Нар жаргах үеийн тэнгэр.</p><button class="flip-btn" type="button">Буцах</button></div></div></article>
       </div>
     </section>
 
@@ -52,6 +53,16 @@
     </section>
     <section id="about"><h2 class="mb-4 text-2xl font-bold">Тухай</h2><div class="flex flex-col items-center gap-4 rounded-xl border border-line bg-panel p-6 sm:flex-row"><div class="text-5xl text-brand" aria-hidden="true">◎</div><p>Энэ хуудас нь өмнөх зургийн цомгийн Grid, responsive загвар, CSS animation, 3D flip card, dark mode болон multimedia хэсгийг үргэлжлүүлэн хөгжүүлсэн хувилбар юм.</p></div></section>
   </main>
+  <div class="gallery-hover-preview" id="galleryHoverPreview" aria-hidden="true" hidden>
+    <img id="galleryHoverImage" alt="">
+  </div>
+  <dialog class="image-lightbox" id="imageLightbox" aria-label="Зургийг бүтэн дэлгэцээр харах">
+    <div class="lightbox-toolbar">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <button class="flip-btn" id="lightboxClose" type="button" aria-label="Зураг хаах">Хаах</button>
+    </div>
+    <img class="lightbox-image" id="lightboxImage" alt="">
+  </dialog>
   <footer class="bg-panel2 py-5 text-center text-muted"><p>© 2026 Зургийн цомог портал — Tailwind CSS</p></footer>
   <script src="js/gallery.js"></script>
 </body>
